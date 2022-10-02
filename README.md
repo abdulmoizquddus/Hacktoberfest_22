@@ -22,7 +22,7 @@ Hacktoberfest is a program by Digital Ocean and Github, where you can easily win
 
 ### 1. Register for Hacktoberfest
 
-###### https://hacktoberfest.digitalocean.com/
+###### https://hacktoberfest.com
 
 ### 2. Fork it :fork_and_knife:
 
