@@ -68,7 +68,7 @@ https://github.com/your-username/Hacktoberfest.git
 
 ###### Once we have the URL, we’re ready to clone the repository. To do this, we’ll combine the git clone command with the repository URL from the command line in a terminal window:
 
-git clone https://github.com/your-username/Hacktoberfest.git
+git clone https://github.com/your-username/Hacktoberfest_22.git
 
 ### 4. Create a New Branch
 
