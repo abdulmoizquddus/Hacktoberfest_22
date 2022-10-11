@@ -1,0 +1,144 @@
+<html>
+<head>
+  <title>Tower of Hanoi Demonstration &mdash; Example 03</title>
+  <link href='http://fonts.googleapis.com/css?family=Chewy&text=Tower%20of%20Hanoi%20Game' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/TowerOfHanoi.min.css?v=0.1" />
+  <link rel="stylesheet" type="text/css" href="css/DemoPage.css?v=0.1" />
+  <!-- Font Awesome Cdn -->
+  <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  #button {
+		box-sizing: border-box;
+		width: 90px;
+		height: 35px;
+		border: none;
+		margin: auto;
+		border-radius: 4px;
+		background-color: #243a6f;
+		color: white;
+		font-size: 15px;
+		cursor: pointer;
+	}
+  p i, a{
+		color: #e53637;
+		text-decoration: none;
+	}
+</style>
+<body>
+<div class="demo-block" id="main">
+  <h1>Tower of Hanoi Game</h1>
+  <br><br>
+  <div id="game-container"></div>
+  <p id="step-information">
+    Maximum steps to move from source peg to destination peg are <span id="max-step">0</span> steps. <br><br>
+    Your number of steps: <span id="step">0</span>.
+  </p>
+  <p>
+    <label for="number-of-discs">Number of discs:</label>
+    <select id="number-of-discs">
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+    </select> |
+    <button id="button"><a style="color: white;" id="restart" href="#">Restart</a></button>
+  </p>
+</div>
+<div class="demo-block" id="footer">
+  <p>Made with <i class="fa fa-heart-o" arial-hidden="true"></i> by <a href="https://www.linkedin.com/in/humairshoukat/"><b>Humair Shoukat</b></a></p>
+</div>
+
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/TowerOfHanoi.min.js?v=0.1"></script>
+<script>
+jQuery(function() {
+  // Instantiate new game with numOfDiscs = 3.
+  var game = new Game({
+    numOfDiscs: 3,
+    // Callback after object game is initialized.
+    afterInit: function(g) {
+      jQuery('#max-step').text(g.maxSteps);
+    },
+    // Callback after steps is performed.
+    afterStep: function(g) {
+      var steps = g.getSteps();
+      jQuery('#step').text(steps);
+
+      setTimeout(function() {
+        if ( g.isWin() === 1 ) {
+          alert("You win!");
+          g.freeze();
+        } else if (steps >= g.getMaxSteps()) {
+          alert("Game over!");
+          g.freeze();
+        }
+      }, 200);
+    }
+  });
+
+  var stepInformation = jQuery('#step-information');
+  var stepInfoText;
+
+  // Callback can be given later to game object.
+  // Callback when the game is paused.
+  game.onPause = function(g) {
+    // Backups the step text.
+    stepInfoText = stepInformation.html();
+
+    // Replaces information step with pause information.
+    stepInformation.html('Game paused');
+
+    jQuery('#pause').text('Resume');
+  };
+
+  game.onResume = function(g) {
+    // Restores the steps information.
+    stepInformation.html(stepInfoText);
+    jQuery('#pause').text('Pause');
+  }
+
+  jQuery('#pause').click(function(e) {
+    if (game.state === 'playing') {
+      game.pause();
+    } else if (game.state === 'pause') {
+      game.resume();
+    }
+    e.preventDefault();
+  });
+
+  jQuery('#restart').click(function(e) {
+    game.restart();
+    jQuery('#max-step').text(game.maxSteps);
+    jQuery('#step').text(0);
+
+    e.preventDefault();
+  });
+
+  // Callback when number of discs or pegs is changed.
+  function gameChange() {
+    if (!confirm("This will restart the game. Are you sure with that?")) {
+      return false;
+    }
+
+    var pegs  = jQuery('#number-of-pegs').val();
+    var discs = jQuery('#number-of-discs').val();
+
+    game.restart({
+      numOfPegs: pegs,
+      numOfDiscs: discs,
+      destinationPeg: pegs,
+    });
+
+    jQuery('#max-step').text(game.maxSteps);
+    jQuery('#step').text(0);
+  }
+
+  jQuery('#number-of-pegs').change(gameChange);
+  jQuery('#number-of-discs').change(gameChange);
+});
+</script>
+</body>
+</html>
