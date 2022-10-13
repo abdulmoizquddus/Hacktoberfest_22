@@ -1,0 +1,39 @@
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+
+class LinkedList:
+	def __init__(self):
+		self.head = None
+
+	def reverse(self, head):
+		if head is None or head.next is None:
+			return head
+		rest = self.reverse(head.next)
+		head.next.next = head
+		head.next = None
+		return rest
+
+	def __str__(self):
+		lListStr = ""
+		curr = self.head
+		while curr:
+			lListStr = (lListStr + str(curr.data) + " ")
+			curr = curr.next
+		return lListStr
+
+	def add(self, data):
+		curr = Node(data)
+		curr.next = self.head
+		self.head = curr
+
+lList = LinkedList()
+lList.add(1)
+lList.add(2)
+lList.add(3)
+lList.add(4)
+lList.add(5)
+print(lList)
+lList.head = lList.reverse(lList.head)
+print(lList)
