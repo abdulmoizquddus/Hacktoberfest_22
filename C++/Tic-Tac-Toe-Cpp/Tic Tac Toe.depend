@@ -1,0 +1,150 @@
+# depslib dependency file v1.0
+1582993310 source:c:\users\muhammad haseeb\desktop\tic tac toe\tic tac toe\main.cpp
+	<iostream>
+	<windows.h>
+	"Game.h"
+	"Game_info.h"
+	"How_to_win.h"
+
+1582990722 c:\users\muhammad haseeb\desktop\tic tac toe\tic tac toe\game.h
+	<iostream>
+
+1582990744 source:c:\users\muhammad haseeb\desktop\tic tac toe\tic tac toe\game.cpp
+	"Game.h"
+	<iostream>
+	<windows.h>
+
+1582993265 source:c:\users\muhammad haseeb\desktop\tic tac toe\tic tac toe\how_to_win.cpp
+	"How_to_win.h"
+	"Game.h"
+	<iostream>
+	<windows.h>
+
+1582992757 c:\users\muhammad haseeb\desktop\tic tac toe\tic tac toe\how_to_win.h
+	"Game.h"
+	<iostream>
+	<windows.h>
+
+1582993069 c:\users\muhammad haseeb\desktop\tic tac toe\tic tac toe\game_info.h
+	"Game.h"
+	<iostream>
+	<windows.h>
+
+1583169326 source:c:\users\muhammad haseeb\desktop\tic tac toe\game_info.cpp
+	"Game_info.h"
+	"Game.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+
+1582993069 c:\users\muhammad haseeb\desktop\tic tac toe\game_info.h
+	"Game.h"
+	<iostream>
+	<windows.h>
+
+1585634579 c:\users\muhammad haseeb\desktop\tic tac toe\game.h
+	<iostream>
+	"Color.h"
+
+1583169321 source:c:\users\muhammad haseeb\desktop\tic tac toe\how_to_win.cpp
+	"How_to_win.h"
+	"Game.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+
+1582992757 c:\users\muhammad haseeb\desktop\tic tac toe\how_to_win.h
+	"Game.h"
+	<iostream>
+	<windows.h>
+
+1585635486 source:c:\users\muhammad haseeb\desktop\tic tac toe\main.cpp
+	"Game.h"
+	"Game_info.h"
+	"How_to_win.h"
+	"Menu.h"
+
+1585635493 source:c:\users\muhammad haseeb\desktop\tic tac toe\game.cpp
+	"Game.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+	"Color.h"
+
+1583119944 c:\users\muhammad haseeb\desktop\tic tac toe\color.h
+
+1583942453 source:c:\users\muhammad haseeb\desktop\tic tac toe\color.cpp
+	"Color.h"
+	<iostream>
+	<windows.h>
+
+1583122056 c:\users\muhammad haseeb\desktop\tic tac toe\font size.h
+
+1583122185 source:c:\users\muhammad haseeb\desktop\tic tac toe\font size.cpp
+
+1584264660 c:\users\muhammad haseeb\desktop\tic tac toe\menu.h
+
+1584265223 source:c:\users\muhammad haseeb\desktop\tic tac toe\menu.cpp
+	"Menu.h"
+	"Game.h"
+	"Color.h"
+	<conio.h>
+	<windows.h>
+
+1583946053 source:e:\new folderdc\tic tac toe\color.cpp
+	"Color.h"
+	<iostream>
+	<windows.h>
+
+1583123544 e:\new folderdc\tic tac toe\color.h
+
+1589028728 source:e:\new folderdc\tic tac toe\game.cpp
+	"Game.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+	"Color.h"
+
+1589222449 e:\new folderdc\tic tac toe\game.h
+	<iostream>
+	"Color.h"
+
+1583172926 source:e:\new folderdc\tic tac toe\game_info.cpp
+	"Game_info.h"
+	"Game.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+
+1582996669 e:\new folderdc\tic tac toe\game_info.h
+	"Game.h"
+	<iostream>
+	<windows.h>
+
+1583172921 source:e:\new folderdc\tic tac toe\how_to_win.cpp
+	"How_to_win.h"
+	"Game.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+
+1582996357 e:\new folderdc\tic tac toe\how_to_win.h
+	"Game.h"
+	<iostream>
+	<windows.h>
+
+1584268823 source:e:\new folderdc\tic tac toe\menu.cpp
+	"Menu.h"
+	"Game.h"
+	"Color.h"
+	<conio.h>
+	<windows.h>
+
+1584268260 e:\new folderdc\tic tac toe\menu.h
+
+1585639442 source:e:\new folderdc\tic tac toe\main.cpp
+	"Game.h"
+	"Game_info.h"
+	"How_to_win.h"
+	"Menu.h"
+
