@@ -4,6 +4,14 @@
 // It is applicable when you know the distribution of your data. The intuition is simple: instead of guessing that the target value is in the middle of your range (as we do in Binary Search), you adjust your guess based on the value. 
 // If the value is smaller than average, you aim near the beginning of the array. If the value much larger than average, you guess that the index should be near the end.
 
+// Start
+//  Step1: In a loop, calculate the value of “pos” using the probe position formula. 
+//  Step2: If it is a match, return the index of the item, and exit. 
+//  Step3: If the item is less than arr[pos], calculate the probe position of the left sub-array. Otherwise calculate the same in the right sub-array. 
+//  Step4: Repeat until a match is found or the sub-array reduces to zero.
+// End
+
+
 #include <iostream>
 using namespace std;
 
