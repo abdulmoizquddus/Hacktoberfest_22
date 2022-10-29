@@ -1,0 +1,31 @@
+body {
+  background-color: #efefef;
+}
+
+h1 {
+  font-family: 'Chewy', cursive;
+  font-size: 50;
+}
+
+.demo-block {
+  width: 860px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+#main {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-family: verdana;
+}
+#step-information span {
+  font-weight: bold;
+  font-style: italic;
+  font-size:  120%;
+}
+#footer {
+  padding: 5px;
+  font-family: verdana;
+  font-size: 11px;
+}
